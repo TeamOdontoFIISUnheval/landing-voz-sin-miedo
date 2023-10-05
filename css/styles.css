@@ -135,19 +135,19 @@ form .btn_email{
   padding: 0px 30px;
   border: none;
   background-color: var(--bs-pink);
-  color: #fff
+  color: #fff;
+  transition: background-color 0.3s ease; 
 }
 
 form .btn_email:hover{
   background-color: var(--bs-pink1);
 }
 
-hr {
-  margin: 1rem 0;
-  color: inherit;
-  border: 0;
-  border-top: 1px solid;
-  opacity: 0.25;
+.hr-container hr{
+  border: 2px solid #000; 
+  border-radius: 20px; 
+  margin-top: 0px;
+  width: 30px; 
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
@@ -661,13 +661,6 @@ progress {
 .figure-caption {
   font-size: 0.875em;
   color: #6c757d;
-}
-
-/* Suscripción */
-form .text_email {
-  width: 250px;
-  height: 50px;
-  color: ;
 }
 
 .container,
@@ -10878,7 +10871,7 @@ html {
 }
 
 .bg-gradient-primary-to-secondary {
-  background: linear-gradient(45deg,  var(--bs-blue), var(--bs-purple)) !important;
+  background: linear-gradient(45deg,  var(--bs-pink1), var(--bs-pink)) !important;
 }
 
 .font-alt {
@@ -10903,8 +10896,6 @@ section {
 }
 
 #mainNav {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   background-color: var(--bs-body);
 }
 #mainNav .navbar-brand {
