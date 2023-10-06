@@ -37,7 +37,7 @@
   --bs-gray-300: #dee2e6;
   --bs-gray-400: #ced4da;
   --bs-gray-500: #adb5bd;
-  --bs-gray-600: #6c757d;
+  --bs-gray-600: #6c757d46;
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
@@ -205,12 +205,43 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-hr {
-  margin: 1rem 0;
-  color: inherit;
-  border: 0;
-  border-top: 1px solid;
-  opacity: 0.25;
+/* Suscripción */
+form .text_email{
+  width: 30%;
+  height: 45px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px var(--bs-purple);
+  color: var(--bs-gray);
+}
+
+form .text_email:focus{
+  color: var(--bs-gray);
+  border: 1px var(--bs-purple);
+  background-color: #ffe9f3;
+  border: none;
+  text-decoration: none;
+}
+
+form .btn_email{
+  height: 45px;
+  border-radius: 5px;
+  padding: 0px 30px;
+  border: none;
+  background-color: var(--bs-pink);
+  color: #fff;
+  transition: background-color 0.3s ease; 
+}
+
+form .btn_email:hover{
+  background-color: var(--bs-pink1);
+}
+
+.hr-container hr{
+  border: 2px solid #000; 
+  border-radius: 20px; 
+  margin-top: 0px;
+  width: 30px; 
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
@@ -724,13 +755,6 @@ progress {
 .figure-caption {
   font-size: 0.875em;
   color: #6c757d;
-}
-
-/* Suscripción */
-form .text_email {
-  width: 250px;
-  height: 50px;
-  color: ;
 }
 
 .container,
@@ -10941,7 +10965,7 @@ html {
 }
 
 .bg-gradient-primary-to-secondary {
-  background: linear-gradient(45deg,  var(--bs-blue), var(--bs-purple)) !important;
+  background: linear-gradient(45deg,  var(--bs-pink1), var(--bs-pink)) !important;
 }
 
 .font-alt {
@@ -10966,8 +10990,6 @@ section {
 }
 
 #mainNav {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   background-color: var(--bs-body);
 }
 #mainNav .navbar-brand {
@@ -11053,7 +11075,7 @@ section {
 section.cta {
   position: relative;
   padding: 15rem 0;
-  background-image: url("https://source.unsplash.com/5g41N3uRPf8/1500x800");
+  background-image: url("https://cdn.create.vista.com/api/media/medium/214818082/stock-photo-smiling-young-female-freelancer-looking-camera-while-working-laptop-table?token=");
   background-position: center;
   background-size: cover;
 }
