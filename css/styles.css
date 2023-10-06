@@ -86,6 +86,101 @@
   --bs-highlight-bg: #fff3cd;
 }
 
+
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slider img:first-child {
+  opacity: 1;
+}
+
+.slider img.active {
+  opacity: 1;
+}
+
+@keyframes slide {
+  0% {
+      transform: translateX(0);
+  }
+  33% {
+      transform: translateX(-100%);
+  }
+  66% {
+      transform: translateX(-200%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+.slider img:not(:first-child) {
+  animation: slide 5s infinite;
+  animation-delay: calc(var(--i) * -1s);
+}
+
+/* .btn-primario {
+  color: #fff;
+  background-color: #FF6B6B;
+  border-color: #FF6B6B;
+}
+
+.btn-primario:hover {
+  color: #fff;
+  background-color: #FF8F8F;
+  border-color: #FF8F8F;
+}
+
+.btn-secundario {
+  color: #fff;
+  background-color: #6BFFB8;
+  border-color: #6BFFB8;
+}
+
+.btn-secundario:hover {
+  color: #fff;
+  background-color: #8FFFD7;
+  border-color: #8FFFD7;
+}
+
+.rounded-pill {
+  border-radius: 50rem !important;
+}
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 *,
 *::before,
 *::after {

@@ -31,4 +31,37 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // Slider code
+    const slider = document.querySelector('.slider');
+    const images = slider.querySelectorAll('img');
+    const prevBtn = slider.querySelector('.prev');
+    const nextBtn = slider.querySelector('.next');
+    let currentIndex = 0;
+
+    function showImage(index) {
+        images.forEach((image) => {
+            image.classList.remove('active');
+        });
+        images[index].classList.add('active');
+        currentIndex = index;
+    }
+
+    function nextImage() {
+        let nextIndex = currentIndex + 1;
+        if (nextIndex >= images.length) {
+            nextIndex = 0;
+        }
+        showImage(nextIndex);
+    }
+
+    function prevImage() {
+        let prevIndex = currentIndex - 1;
+        if (prevIndex < 0) {
+            prevIndex = images.length - 1;
+        }
+        showImage(prevIndex);
+    }
+    setInterval(nextImage, 3000);
+    
+
 });
