@@ -50,9 +50,50 @@
                         <!-- Mashead text and app badges-->
                         <div class="mb-5 mb-lg-0 text-center text-lg-start">
                             <div id="BUTTON1" class="d-flex flex-column flex-lg-row align-items-center mb-5">
-                                <button class="btn btn-primary rounded-pill" style="background-color: #5938f7; padding: 10px 20px;">¿Qué es voz sin miedo?</button>
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary rounded-pill" style="background-color: #5938f7; padding: 10px 20px;">¿Qué es voz sin miedo?</button>
                             </div>
-                            
+                            <!-- Modal -->
+                            <div class="modal fade modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Voz Sin Miedo - MVP</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <iframe width="100%" height="430" src="https://www.youtube.com/embed/WN7IG5st-bM?si=r7RXgaPsBefagYfh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Voz Sin Miedo MVP</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/WN7IG5st-bM?si=r7RXgaPsBefagYfh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                </div>
+                            </div> -->
+                            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+                <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>')</script>
+                <script src="js/bootstrap.min.js"></script>
+                <script>
+                    $('#link').click(function () {
+                        var src = 'http://www.youtube.com/v/FSi2fJALDyQ&amp;autoplay=1';
+                        $('#myModal').modal('show');
+                        $('#myModal iframe').attr('src', src);
+                    });
+
+                    $('#myModal button').click(function () {
+                        $('#myModal iframe').removeAttr('src');
+                    });
+                </script>
+
                             <h1 class="display-3 lh-1 mb-3">Prevenir, Actuar y Proteger, nuestra promesa para ti.</h1>
                             <p class="lead fw-normal text-muted mb-5">Un complemento contra la inseguridad que sientes en las calles!</p>
                             <div id="BUTTON2" class="d-flex flex-column flex-lg-row align-items-center">
@@ -219,7 +260,7 @@
                                 <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Actuar</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Proteger</button>
+                                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Asistir</button>
                             </li>
                         </ul>
                     </div>
