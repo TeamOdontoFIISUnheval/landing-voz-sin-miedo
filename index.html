@@ -556,11 +556,14 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script>
+            // Usa jQuery para mostrar el modal al cargar la página
             $(document).ready(function () {
                 $('#exampleModal').modal('show');
-                    $('.btn').click(function () {
-                    $('#exampleModal').modal('show');
-                });
+            });
+    
+            // Evita que otros botones abran el modal
+            $('.btn').not('#openModalButton').click(function (e) {
+                e.stopPropagation();
             });
         </script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
