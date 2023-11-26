@@ -41,7 +41,7 @@
                         <li class="nav-item"><a class="nav-link me-lg-3" href="#features">Características</a></li>
                         <li class="nav-item"><a class="nav-link me-lg-3" href="#lista-espera">Lista de Espera</a></li>
                     </ul>
-                    <button class="btn rounded-button2" style="background-color: #9B2A99; border: #9B2A99; padding: 8px 15px; color: #fff;" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+                    <button id="btnDescargar" class="btn rounded-button2" style="background-color: #9B2A99; border: #9B2A99; padding: 8px 15px; color: #fff;" data-bs-toggle="modal" data-bs-target="#feedbackModal">
                         <i class="fa-solid fa-circle-down"></i>
                         Descargar
                     </button>
@@ -568,6 +568,12 @@
             // Evita que otros botones abran el modal
             $('.btn').not('#openModalButton').click(function (e) {
                 e.stopPropagation();
+            });
+        </script>
+        <script>
+            document.getElementById('btnDescargar').addEventListener('click', function() {
+                // Rastrear clic en el botón de Descargar con Plausible Analytics
+                window.plausible('Clic en Descargar');
             });
         </script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
