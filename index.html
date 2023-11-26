@@ -25,6 +25,21 @@
         <script defer data-domain="teamodontofiisunheval.github.io/landing-voz-sin-miedo" src="https://plausible.io/js/script.js"></script>
         <script async defer data-domain="teamodontofiisunheval.github.io/landing-voz-sin-miedo" src="https://plausible.io/js/plausible.js"></script>
         
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              var btnDescargar = document.getElementById("btnDescargar");
+              if (btnDescargar) {
+                btnDescargar.addEventListener("click", function() {
+                  plausible('Descarga de archivo', {
+                    props: {
+                      elementId: 'btnDescargar',
+                      classes: 'btn rounded-button2'
+                    }
+                  });
+                });
+              }
+            });
+          </script>
 
 
     </head>
@@ -573,11 +588,7 @@
                 e.stopPropagation();
             });
         </script>
-         <script>
-            document.getElementById("btnDescargar").addEventListener("click", function() {
-              plausible('Clic en btnDescargar');
-            });
-          </script>
+         
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
