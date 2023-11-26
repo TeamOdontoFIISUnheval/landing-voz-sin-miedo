@@ -50,10 +50,27 @@
                         <!-- Mashead text and app badges-->
                         <div class="mb-5 mb-lg-0 text-center text-lg-start">
                             <div id="BUTTON1" class="d-flex flex-column flex-lg-row align-items-center mb-4">
-                                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn rounded-pill" >
-                                    <i class="fa-solid fa-play"></i>
-                                    ¿Qué es Voz Sin Miedo?
-                                </button>
+                                   <!-- Agrega el botón y el modal -->
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn rounded-pill">
+                        <i class="fa-solid fa-play"></i>
+                        ¿Qué es Voz Sin Miedo?
+                    </button>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Video de Voz Sin Miedo</h5>
+                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                         </div>
+                <div class="modal-body">
+                    <!-- Agrega aquí el código del reproductor de video -->
+                    <!-- Por ejemplo, un iframe de YouTube -->
+                    <iframe width="100%" height="315" src="https://youtu.be/YWuvq0Q8OwY" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
                             </div>
                             <div style="color: #0170BF" class="mb-3">
                                 <p>#TuSeguridadACadaPaso</p>
@@ -551,6 +568,16 @@
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+
+
+        <script>
+            $(document).ready(function () {
+                $('#exampleModal').modal('show');
+                    $('.btn').click(function () {
+                    $('#exampleModal').modal('show');
+                });
+            });
+        </script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
