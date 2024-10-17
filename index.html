@@ -62,6 +62,14 @@
                         <li class="nav-item"><a class="nav-link me-lg-3" href="#estadisticas">Estadísticas</a></li>
                         <li class="nav-item"><a class="nav-link me-lg-3" href="#features">Características</a></li>
                         <li class="nav-item"><a class="nav-link me-lg-3" href="#lista-espera">Lista de Espera</a></li>
+                        <!-- Blog Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle me-lg-3" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
+                            <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+                                <li><a class="dropdown-item" href="./pages/Blogs.html#blog1">Cómo las Apps Pueden Ayudar...</a></li>
+                                <!-- <li><a class="dropdown-item" href="./pages/Blogs.html#blog2">Blog 2</a></li> -->
+                            </ul>
+                        </li>
                     </ul>
                     <button id="btnDescargar" class="btn rounded-button2 plausible-event-name=Button+Click" style="background-color: #9B2A99; border: #9B2A99; padding: 8px 15px; color: #fff;" data-bs-toggle="modal" data-bs-target="#feedbackModal">
                         <i class="fa-solid fa-circle-down"></i>
@@ -203,7 +211,7 @@
                     </div>
                     <!-- Pills Buttons for tabs -->
                     <div class="container d-flex justify-content-center mb-5">
-                        <ul class="nav nav-pills w-25 mr-1 d-flex justify-content-between" id="pills-tab" role="tablist">
+                        <ul+ class="nav nav-pills w-25 mr-1 d-flex justify-content-between" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active nav-link-caracteristicas" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true" >Prevenir</button>
                             </li>
@@ -482,6 +490,36 @@
                 </div>
             </div>
         </aside>
+
+        <section class="text-center bg-gradient-primary-to-secondary" id="blogs">
+            <div class="container px-5">
+                <h1 class="text-opacity-75">Blog</h1>
+                <div class="hr-container" style="display: flex; justify-content: center; align-items: center">
+                    <hr>
+                </div>
+                <div class="row gx-5 justify-content-center"> <!-- Contenedor general para centrar -->
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center"> <!-- Ajustar columnas -->
+                        <!-- Blog Card 1 -->
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="./assets/img/blog1hq720.jpg" class="card-img-top" alt="Imagen blog 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <a href="./pages/Blogs.html#blog1" style="color: #ff3366; text-decoration: none; font-weight: bold;">¡ Cómo las Apps Pueden Ayudar en Situaciones de Emergencia !</a>
+                                    </h5>
+                                    <p class="card-text" style="font-size: 14px;">Las aplicaciones de protección pueden ser útiles para las mujeres...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Aquí puedes agregar más tarjetas -->
+                    </div>
+                </div>
+            </div>
+        </section>
+   
+   
+
+
         <!-- Call to action section-->
         <section class="cta" id="lista-espera">
             <div class="cta-content">
@@ -500,6 +538,8 @@
                         </div>
                 </div>
         </section>
+
+        
         <!-- Footer-->
         <footer class="bg-black text-center py-5">
             <div class="container px-5">
